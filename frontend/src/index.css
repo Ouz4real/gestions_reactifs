@@ -1,0 +1,69 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ── Hover global sur tous les boutons ── */
+button:not(:disabled) {
+  transition: opacity 0.15s, filter 0.15s, transform 0.1s;
+}
+
+button:not(:disabled):hover {
+  filter: brightness(0.9);
+  opacity: 0.92;
+}
+
+button:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+/* Hover sur les liens de navigation de la sidebar */
+a {
+  transition: opacity 0.15s;
+}
+
+/* Hover sur les lignes de tableau */
+tbody tr {
+  transition: background 0.12s;
+}
+
+tbody tr:hover {
+  background: #f5f8ff !important;
+}
+
+/* Hover sur les cards cliquables (liens) */
+a > div {
+  transition: box-shadow 0.15s, transform 0.12s;
+}
+
+a > div:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-1px);
+}
+
+/* Hover sur les items de la sidebar */
+aside a {
+  transition: background 0.15s, color 0.15s !important;
+}
+
+/* Hover sur les raccourcis du dashboard */
+.shortcut:hover {
+  background: #f0f4ff !important;
+  border-color: #2563eb !important;
+}
+
+/* Curseur pointer sur tous les éléments cliquables */
+button, a, [role="button"] {
+  cursor: pointer;
+}
+
+/* Input focus */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
